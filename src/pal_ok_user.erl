@@ -145,7 +145,7 @@ uri(UID) ->
 -spec image(binary()) -> binary().
 image(Uri) ->
 	%% NOTE: It's always better to have a secure URI
-	re:replace(Uri, <<"^http">>, <<"https">>, [{return, binary}]).
+	re:replace(Uri, <<"^http://">>, <<"https://">>, [{return, binary}]).
 
 -spec hexstr(binary()) -> binary().
 hexstr(Val) ->
